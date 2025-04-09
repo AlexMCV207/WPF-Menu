@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="850">
+    <Grid>
+        <Button x:Name="btn_plik" Content="Plik" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="60" Background="White" Margin="-1,0,0,0" MouseEnter="plik_show" MouseLeave="plik_hide" />
+        <Button x:Name="btn_edycja" Content="Edycja" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="80" Background="White" Margin="58,0,0,0" MouseEnter="edycja_show" MouseLeave="edycja_hide"/>
+        <Button x:Name="btn_oprog" Content="O programie" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="100" Background="White" Margin="137,0,0,0" Click="btn_oprog_window"/>
+        <ListView Margin="10,29,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="383" Width="830" x:Name="listView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="PESEL" Width="70" DisplayMemberBinding="{Binding u_pesel}"/>
+                    <GridViewColumn Header="Imię" Width="90" DisplayMemberBinding="{Binding u_name}"/>
+                    <GridViewColumn Header="Drugie imię" Width="90" DisplayMemberBinding="{Binding u_sname}"/>
+                    <GridViewColumn Header="Nazwisko" Width="100" DisplayMemberBinding="{Binding u_lname}"/>
+                    <GridViewColumn Header="Data urodzenia" Width="90" DisplayMemberBinding="{Binding u_dateofbirth}"/>
+                    <GridViewColumn Header="Numer telefonu" Width="90" DisplayMemberBinding="{Binding u_phone}"/>
+                    <GridViewColumn Header="Adres zamieszkania" Width="120" DisplayMemberBinding="{Binding u_pesel}"/>
+                    <GridViewColumn Header="Miejscowość" Width="95" DisplayMemberBinding="{Binding u_pesel}"/>
+                    <GridViewColumn Header="Kod pocztowy" Width="80" DisplayMemberBinding="{Binding u_pesel}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btn_plik_wczytaj" Content="Wczytaj" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="90" Background="White" MouseEnter="plik_show" MouseLeave="plik_hide" Margin="-1,19,0,0" IsEnabled="False" Opacity="0"/>
+        <Button x:Name="btn_plik_zapisz" Content="Zapisz" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="90" Background="White" MouseEnter="plik_show" MouseLeave="plik_hide" Margin="-1,38,0,0" IsEnabled="False" Opacity="0"/>
+        <Button x:Name="btn_edycja_dodaj" Content="Dodaj nowego ucznia" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" Background="White" MouseEnter="edycja_show" MouseLeave="edycja_hide" Margin="58,19,0,0" IsEnabled="False" Opacity="0" Click="btn_edycja_dodaj_Click"/>
+        <Button x:Name="btn_edycja_usun" Content="Usuń zaznaczonych uczniów" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" Background="White" MouseEnter="edycja_show" MouseLeave="edycja_hide" Margin="58,38,0,0" IsEnabled="False" Opacity="0"/>
+
+    </Grid>
+</Window>
