@@ -7,28 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="850">
     <Grid>
-        <Button x:Name="btn_plik" Content="Plik" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="60" Background="White" Margin="-1,0,0,0" MouseEnter="plik_show" MouseLeave="plik_hide" />
-        <Button x:Name="btn_edycja" Content="Edycja" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="80" Background="White" Margin="58,0,0,0" MouseEnter="edycja_show" MouseLeave="edycja_hide"/>
-        <Button x:Name="btn_oprog" Content="O programie" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="100" Background="White" Margin="137,0,0,0" Click="btn_oprog_window"/>
-        <ListView Margin="10,29,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="383" Width="830" x:Name="listView">
+        <Menu x:Name="menu" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="New_Click" IsEnabled="False"/>
+                <MenuItem Header="Open" Click="Open_Click"/>
+                <MenuItem Header="Save" Click="Save_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="New" Click="NewRecord_Click"/>
+                <MenuItem Header="Remove Selected" Click="RemoveSel_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <ListView Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="383" Width="830" x:Name="listView" SelectionMode="Extended">
+            <ListView.Resources>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Left" />
+                    <Setter Property="Padding" Value="5,0,0,0"/>
+                    <Setter Property="Margin" Value="0,0,0,0"/>
+                </Style>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Left" />
+                    <Setter Property="Padding" Value="5,0,0,0"/>
+                </Style>
+            </ListView.Resources>
             <ListView.View>
-                <GridView>
+                <GridView AllowsColumnReorder="False">
                     <GridViewColumn Header="PESEL" Width="70" DisplayMemberBinding="{Binding u_pesel}"/>
-                    <GridViewColumn Header="Imię" Width="90" DisplayMemberBinding="{Binding u_name}"/>
+                    <GridViewColumn Header="Imię" Width="75" DisplayMemberBinding="{Binding u_name}"/>
                     <GridViewColumn Header="Drugie imię" Width="90" DisplayMemberBinding="{Binding u_sname}"/>
                     <GridViewColumn Header="Nazwisko" Width="100" DisplayMemberBinding="{Binding u_lname}"/>
                     <GridViewColumn Header="Data urodzenia" Width="90" DisplayMemberBinding="{Binding u_dateofbirth}"/>
                     <GridViewColumn Header="Numer telefonu" Width="90" DisplayMemberBinding="{Binding u_phone}"/>
-                    <GridViewColumn Header="Adres zamieszkania" Width="120" DisplayMemberBinding="{Binding u_pesel}"/>
-                    <GridViewColumn Header="Miejscowość" Width="95" DisplayMemberBinding="{Binding u_pesel}"/>
-                    <GridViewColumn Header="Kod pocztowy" Width="80" DisplayMemberBinding="{Binding u_pesel}"/>
+                    <GridViewColumn Header="Adres zamieszkania" Width="120" DisplayMemberBinding="{Binding u_adress}"/>
+                    <GridViewColumn Header="Miejscowość" Width="95" DisplayMemberBinding="{Binding u_city}"/>
+                    <GridViewColumn Header="Kod pocztowy" Width="90" DisplayMemberBinding="{Binding u_postcode}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btn_plik_wczytaj" Content="Wczytaj" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="90" Background="White" MouseEnter="plik_show" MouseLeave="plik_hide" Margin="-1,19,0,0" IsEnabled="False" Opacity="0"/>
-        <Button x:Name="btn_plik_zapisz" Content="Zapisz" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="90" Background="White" MouseEnter="plik_show" MouseLeave="plik_hide" Margin="-1,38,0,0" IsEnabled="False" Opacity="0"/>
-        <Button x:Name="btn_edycja_dodaj" Content="Dodaj nowego ucznia" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" Background="White" MouseEnter="edycja_show" MouseLeave="edycja_hide" Margin="58,19,0,0" IsEnabled="False" Opacity="0" Click="btn_edycja_dodaj_Click"/>
-        <Button x:Name="btn_edycja_usun" Content="Usuń zaznaczonych uczniów" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" Background="White" MouseEnter="edycja_show" MouseLeave="edycja_hide" Margin="58,38,0,0" IsEnabled="False" Opacity="0"/>
-
     </Grid>
 </Window>

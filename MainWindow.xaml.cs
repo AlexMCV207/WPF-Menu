@@ -8,6 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.Collections.ObjectModel;
+using System.IO;
 
 namespace WpfApp1
 {
@@ -21,48 +24,40 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-
-        private void plik_show(object sender, MouseEventArgs e)
-        {
-            btn_plik_wczytaj.Opacity = 100;
-            btn_plik_wczytaj.IsEnabled = true;
-            btn_plik_zapisz.Opacity = 100;
-            btn_plik_zapisz.IsEnabled = true;
-        }
-        private void plik_hide(object sender, MouseEventArgs e)
-        {
-            btn_plik_wczytaj.Opacity = 0;
-            btn_plik_wczytaj.IsEnabled = false;
-            btn_plik_zapisz.Opacity = 0;
-            btn_plik_zapisz.IsEnabled = false;
-        }
-        private void edycja_show(object sender, MouseEventArgs e)
-        {
-            btn_edycja_dodaj.Opacity = 100;
-            btn_edycja_dodaj.IsEnabled = true;
-            btn_edycja_usun.Opacity = 100;
-            btn_edycja_usun.IsEnabled = true;
-        }
-        private void edycja_hide(object sender, MouseEventArgs e)
-        {
-            btn_edycja_dodaj.Opacity = 0;
-            btn_edycja_dodaj.IsEnabled = false;
-            btn_edycja_usun.Opacity = 0;
-            btn_edycja_usun.IsEnabled = false;
-        }
-
-        private void btn_oprog_window(object sender, RoutedEventArgs e)
+        private void btn_about_window(object sender, RoutedEventArgs e)
         {
             AboutWindow aW = new AboutWindow();
             aW.Show();
             this.Close();
         }
 
-        private void btn_edycja_dodaj_Click(object sender, RoutedEventArgs e)
+        private void NewRecord_Click(object sender, RoutedEventArgs e)
         {
             InputWindow iW = new InputWindow();
             iW.Show();
             this.Close();
+        }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+        }
+        private void RemoveSel_Click(object sender, RoutedEventArgs e)
+        {
+            while (listView.SelectedItems.Count > 0)
+            {
+                listView.Items.Remove(listView.SelectedItems[0]);
+            }
         }
     }
 }

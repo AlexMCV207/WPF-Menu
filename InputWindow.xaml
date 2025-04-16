@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="InputWindow" Height="450" Width="800">
+        Title="InputWindow" Height="470" Width="320">
     <Grid>
-        
+        <Label Content="PESEL*" HorizontalAlignment="Left" Height="30" Margin="25,20,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Imię*" HorizontalAlignment="Left" Height="30" Margin="25,60,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Drugie imię" HorizontalAlignment="Left" Height="30" Margin="25,100,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nazwisko*" HorizontalAlignment="Left" Height="30" Margin="25,140,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Data urodzenia*" HorizontalAlignment="Left" Height="30" Margin="25,180,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Numer telefonu" HorizontalAlignment="Left" Height="30" Margin="25,220,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Adres zamieszkania*" HorizontalAlignment="Left" Height="30" Margin="25,260,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Miejscowość*" HorizontalAlignment="Left" Height="30" Margin="25,300,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kod pocztowy*" HorizontalAlignment="Left" Height="30" Margin="25,340,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_pesel" HorizontalAlignment="Left" Margin="150,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_name" HorizontalAlignment="Left" Margin="150,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_sname1" HorizontalAlignment="Left" Margin="150,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_lname" HorizontalAlignment="Left" Margin="150,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_date" HorizontalAlignment="Left" Margin="150,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_phone" HorizontalAlignment="Left" Margin="150,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_adress" HorizontalAlignment="Left" Margin="150,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_city" HorizontalAlignment="Left" Margin="150,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_postcode" HorizontalAlignment="Left" Margin="150,345,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="30,400,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="160,400,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
     </Grid>
 </Window>
