@@ -18,14 +18,14 @@
         <Label Content="Kod pocztowy*" HorizontalAlignment="Left" Height="30" Margin="25,340,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_pesel" HorizontalAlignment="Left" Margin="150,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_name" HorizontalAlignment="Left" Margin="150,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="u_sname1" HorizontalAlignment="Left" Margin="150,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="u_sname" HorizontalAlignment="Left" Margin="150,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_lname" HorizontalAlignment="Left" Margin="150,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_date" HorizontalAlignment="Left" Margin="150,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_phone" HorizontalAlignment="Left" Margin="150,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_adress" HorizontalAlignment="Left" Margin="150,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_city" HorizontalAlignment="Left" Margin="150,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="u_postcode" HorizontalAlignment="Left" Margin="150,345,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="30,400,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="160,400,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="30,400,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="Cancel_Click"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="160,400,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="OK_Click"/>
     </Grid>
 </Window>

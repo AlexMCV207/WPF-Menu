@@ -24,7 +24,7 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void btn_about_window(object sender, RoutedEventArgs e)
+        private void OpenAbout_Click(object sender, RoutedEventArgs e)
         {
             AboutWindow aW = new AboutWindow();
             aW.Show();
@@ -41,13 +41,9 @@ namespace WpfApp1
         {
             this.Close();
         }
-        private void New_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
         private void Open_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
         }
         private void Save_Click(object sender, RoutedEventArgs e)
         {

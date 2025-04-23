@@ -9,7 +9,6 @@
     <Grid>
         <Menu x:Name="menu" VerticalAlignment="Top">
             <MenuItem Header="File">
-                <MenuItem Header="New" Click="New_Click" IsEnabled="False"/>
                 <MenuItem Header="Open" Click="Open_Click"/>
                 <MenuItem Header="Save" Click="Save_Click"/>
                 <Separator/>
@@ -19,6 +18,7 @@
                 <MenuItem Header="New" Click="NewRecord_Click"/>
                 <MenuItem Header="Remove Selected" Click="RemoveSel_Click"/>
             </MenuItem>
+            <MenuItem Header="About" Click="OpenAbout_Click"/>
         </Menu>
 
         <ListView Margin="10,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="383" Width="830" x:Name="listView" SelectionMode="Extended">
